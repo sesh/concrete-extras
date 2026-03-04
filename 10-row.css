@@ -1,0 +1,17 @@
+/* 
+Stephanie Eckles
+https://github.com/5t3ph/smolcss/tree/main
+ISC
+*/
+
+:root {
+  --min: 12ch;
+  --gap: 1rem;
+}
+
+.row {
+  display: grid;
+  grid-gap: var(--gap);
+  margin-bottom: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+}

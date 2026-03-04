@@ -1,0 +1,7 @@
+table.condensed {
+    font-size: 0.9rem;
+}
+
+table.condensed td, table.condensed th {
+    padding: 0.2rem;
+}

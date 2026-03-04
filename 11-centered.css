@@ -1,0 +1,9 @@
+/* there's an alternative grid-based approach in SmolCSS */
+.centered {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

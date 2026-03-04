@@ -1,0 +1,11 @@
+.text-right {
+    text-align: right;
+}
+
+.text-centered {
+    text-align: center;
+}
+
+html {
+  line-height: 1.15;
+}
