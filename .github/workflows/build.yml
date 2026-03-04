@@ -24,3 +24,16 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add concrete.extras.css
           git diff --staged --quiet || git commit -m "Build concrete.extras.css" && git push
+
+      - name: Deploy to gh-pages
+        run: |
+          cp concrete.extras.css /tmp/concrete.extras.css
+          cp demo.html /tmp/index.html
+          git fetch origin gh-pages:gh-pages || git checkout --orphan gh-pages
+          git checkout gh-pages
+          git rm -rf . || true
+          cp /tmp/concrete.extras.css concrete.extras.css
+          cp /tmp/index.html index.html
+          git add concrete.extras.css index.html
+          git diff --staged --quiet || git commit -m "Deploy to gh-pages"
+          git push origin gh-pages
