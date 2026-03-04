@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>concrete.extras.css</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./concrete.extras.css" />
+
+    <style>
+      :root {
+        --radius: 4px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>concrete.extras.css</h1>
+      <p>
+        The amazing
+        <a href="https://github.com/louismerlin/concrete.css">concrete.css</a>
+        with a small collection of "extras".
+      </p>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="https://github.com/louismerlin/concrete.css"
+              >GitHub (Original)</a
+            >
+            |
+          </li>
+          <li>
+            <a href="https://github.com/sesh/concrete-extras"
+              >GitHub (Extras)</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!--
+        Rough organisation:
+
+        10-19: layout based
+        20-29: text
+        30-39: utils
+        50-59: forms
+      -->
+      <section>
+        <h2>Extras?</h2>
+        <p>
+          Yep, this version of concrete includes a collection of extras that
+          fill in a few gaps missing from the original.
+        </p>
+        <p>
+          Note that <em>many</em> of these extras abandon the classless nature
+          of the original.
+        </p>
+      </section>
+
+      <section>
+        <h2>Rows</h2>
+        <p>
+          A simple CSS-grid based grid from
+          <a href="https://smolcss.dev/#smol-css-grid">SmolCSS</a>.
+        </p>
+
+        <div class="row">
+          <div class="boxed" style="text-align: center">1</div>
+          <div class="boxed" style="text-align: center">2</div>
+          <div class="boxed" style="text-align: center">3</div>
+          <div class="boxed" style="text-align: center">4</div>
+        </div>
+        <div class="row">
+          <div class="boxed" style="text-align: center">
+            This div has much longer content than the others
+          </div>
+          <div class="boxed" style="text-align: center">2</div>
+          <div class="boxed" style="text-align: center">3</div>
+          <div class="boxed" style="text-align: center">4</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Boxed</h2>
+        <p>
+          A border around a value, or something that you'd like to highlight.
+        </p>
+
+        <p class="boxed">It adds <em>oooomph.</em></p>
+        <p class="boxed-dashed">Also available as <code>.boxed-dashed</code></p>
+      </section>
+
+      <section>
+        <h2>Inputs</h2>
+        <p>Unfortunately, there's a few missing inputs in the original.</p>
+
+        <form>
+          <fieldset>
+            <p>
+              <label for="upload">File upload</label>
+              <input name="upload" id="upload" type="file" />
+            </p>
+
+            <div class="row">
+              <p>
+                <label for="time">Time</label>
+                <input name="time" id="time" type="time" />
+              </p>
+
+              <p>
+                <label for="date">Date</label>
+                <input name="date" id="date" type="date" />
+              </p>
+            </div>
+
+            <p>
+              <label for="range">Range slider</label>
+              <input name="range" id="range" type="range" min="1" max="200" />
+            </p>
+
+            <p>
+              <label for="select">Select</label>
+              <select name="select" id="select">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </p>
+
+            <p>
+              <input type="radio" name="option- id="option-radio" value="option1" checked>
+              <label for="option-radio1">Option one is this and that&mdash;be sure to include why it's great</label>
+            </p>
+            <p>
+              <input type="radio" name="option- id="option-radio" value="option2">
+            <label for="option-radio2">TODO: the label is messed up when it's really, really long and wrapping around</label>
+            </p>
+
+            <p>
+              <input type="checkbox" name="terms" id="terms" id="terms">
+              <label for="terms">Do you agree to the terms and conditions?</label>
+            </p>
+          </fieldset>
+        </form>
+      </section>
+
+      <section class="centered">
+        <p>
+          Using <code>.centered</code> on a parent results in a centered child.
+        </p>
+      </section>
+
+      <section>
+        <h2>Tables</h2>
+        <p>A normal table:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Year</th>
+              <th>Size</th>
+              <th>Comment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Skeleton</td>
+              <td>2011</td>
+              <td>5.7kB</td>
+              <td>Awesome</td>
+            </tr>
+            <tr>
+              <td>Milligram</td>
+              <td>2015</td>
+              <td>8.3kB</td>
+              <td>Amazing</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          A <code>.condensed</code> table:
+        </p>
+        <table class="condensed">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Year</th>
+              <th>Size</th>
+              <th>Comment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Skeleton</td>
+              <td>2011</td>
+              <td>5.7kB</td>
+              <td>Awesome</td>
+            </tr>
+            <tr>
+              <td>Milligram</td>
+              <td>2015</td>
+              <td>8.3kB</td>
+              <td>Amazing</td>
+            </tr>
+          </tbody>
+        </table>
+    </section>
+    </main>
+
+    <footer>
+      <hr />
+      <p>
+        Original by <a href="https://louismerl.in">Louis Merlin</a>, extended by
+        <a href="https://brntn.me">Brenton Cleeland</a>
+      </p>
+    </footer>
+  </body>
+</html>
